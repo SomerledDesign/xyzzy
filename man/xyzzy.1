@@ -1,0 +1,79 @@
+.TH XYZZY 1 "September 2026" "xyzzy 0.7.1" "User Commands"
+.SH NAME
+xyzzy \- print a brief adventure-style response
+.SH SYNOPSIS
+.B xyzzy
+[\fB--epic\fR]
+[\fB--theme\fR \fITHEME\fR]
+[\fB--times\fR \fICOUNT\fR]
+[\fB--seed\fR \fIVALUE\fR]
+.br
+.B xyzzy
+\fB--list\fR
+[\fB--theme\fR \fITHEME\fR]
+.br
+.B xyzzy
+\fB--help\fR | \fB--version\fR
+
+.SH DESCRIPTION
+\fBxyzzy\fR writes one or more short, canned responses to the standard output.
+It is intended as a lightweight terminal utility for interactive use.
+By default, it prints a single response selected from the full set of available text.
+You can use any or all of these args, but the real fun comes from just typing \fBxyzzy\fR
+in the terminal.
+.SH OPTIONS
+.TP
+.B --epic
+Use expanded output formatting.
+If \fB--times\fR is not specified, \fBxyzzy\fR prints three responses.
+.TP
+.B --theme \fITHEME\fR
+Restrict output to \fITHEME\fR.
+Valid themes are \fBall\fR, \fBclassic\fR, \fBmaze\fR, \fBoracle\fR, \fBtreasure\fR, \fBglitch\fR, \fBgrue\fR, and \fBepic\fR.
+.TP
+.B --times \fICOUNT\fR
+Print \fICOUNT\fR responses.
+.TP
+.B --seed \fIVALUE\fR
+Initialize the internal pseudo-random generator with \fIVALUE\fR.
+This produces repeatable output for the same argument set.
+.TP
+.B --list
+List all responses matching the selected theme and exit.
+.TP
+.B --help
+Display usage information and exit.
+.TP
+.B --version
+Display version information and exit.
+.SH EXAMPLES
+.TP
+\fBxyzzy\fR
+Print one response.
+.TP
+\fBxyzzy --theme grue --times 2\fR
+Print two responses from the \fBgrue\fR theme.
+.TP
+\fBxyzzy --list --theme oracle\fR
+List all responses in the \fBoracle\fR theme.
+.TP
+\fBxyzzy --seed 7 --times 3\fR
+Print three deterministic responses.
+.SH FILES
+.TP
+\fI/usr/local/bin/xyzzy\fR
+Default installation path for the executable.
+.TP
+\fI/usr/local/share/man/man1/xyzzy.1\fR
+Manual page.
+.TP
+\fI/usr/local/share/doc/xyzzy/LICENSE\fR
+License text.
+.SH EXIT STATUS
+The
+.B xyzzy
+utility exits 0 on success and 1 if an invalid option is supplied or no
+responses are available for the selected theme.
+.SH COPYRIGHT
+Copyright (c) 1998 Somerled Design.
+Licensed under the GNU General Public License, version 2.

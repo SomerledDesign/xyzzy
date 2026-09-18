@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+
+if command -v install >/dev/null 2>&1; then
+    exec install "$@"
+fi
+
+echo "install-sh: no system 'install' program found" >&2
+exit 1

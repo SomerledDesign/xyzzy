@@ -1,0 +1,23 @@
+# Build products
+/xyzzy
+*.o
+*.dSYM/
+.deps/
+
+# Configure / local build state
+/config.log
+/config.status
+/autom4te.cache/
+
+# Dist output (keep folder; ignore tarballs unless you choose to commit one)
+/dist/*.tar.gz
+/xyzzy-*.tar.gz
+/xyzzy-*-stage/
+
+# Editor / OS
+.vscode/
+.DS_Store
+*~
+
+# Agent / local notes
+handoff.md
