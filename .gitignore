@@ -5,6 +5,7 @@
 .deps/
 
 # Configure / local build state
+/Makefile
 /config.log
 /config.status
 /autom4te.cache/
